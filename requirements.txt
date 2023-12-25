@@ -1,2 +1,3 @@
 fastapi[all]
-BeautifulSoup
+beautifulsoup4
+requests
