@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+
 from aniwatch.trendingList import getTrending
 from aniwatch.featuredList import getFeatured
 from aniwatch.genreList import get_genre
@@ -12,10 +13,16 @@ from aniwatch.categoryList import get_categories
 from countdown.countdown_by_genre import getCountDown
 from countdown.cd_by_search import getCountdownBySearchQuery
 
+
 # to start the server run the following command
 # uvicorn main:app --reload
 
 app = FastAPI()
+
+
+@app.get('/')
+def getRoot():
+    return {"for more info go to your yourserverurl/docs"}
 
 
 @app.get('/trending')
